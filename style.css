@@ -1,0 +1,354 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --clr1: #5eeb5b;
+}
+
+header {
+  position: fixed;
+  height: 5rem;
+  width: 100vw;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 40px;
+  color: #fff;
+  backdrop-filter: blur(10px);
+  z-index: 10000;
+
+  & nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+
+    & ul {
+      display: flex;
+      list-style: none;
+      gap: 3.5rem;
+      /* margin-right: 5rem; */
+      & a {
+        text-decoration: none;
+        color: #fff;
+
+        & li {
+          text-transform: uppercase;
+          font-size: 1.2rem;
+          cursor: pointer;
+          transition: 0.2s;
+        }
+        & li:hover {
+          color: var(--clr1);
+        }
+      }
+    }
+  }
+}
+
+.section {
+  height: 100vh;
+  max-width: 100vw;
+  padding-top: 5.5rem;
+}
+
+.btn {
+  height: 3rem;
+  width: 10rem;
+  border: 2px solid var(--clr1);
+  border-radius: 2rem;
+  background: transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  font-weight: 700;
+  gap: 2rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.center_btn {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  background-color: var(--clr1);
+  color: #fff;
+}
+
+.active {
+  color: var(--clr1);
+}
+/* home section */
+
+.home {
+  background-color: #222;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  & .text_sec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .text {
+      letter-spacing: 0.01rem;
+      color: var(--clr1);
+
+      & h1 {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+
+        & span {
+          color: #fff;
+        }
+        & span::after {
+          content: "";
+          position: absolute;
+          left: 14.5rem;
+          /* left: 28rem; */
+          height: 3rem;
+          width: 20rem;
+          background: #222;
+          animation: textAnimation 4s linear infinite;
+        }
+      }
+    }
+
+    & .button {
+      margin-top: 2rem;
+
+      & .btn {
+        margin-right: 2rem;
+        transition: 0.3s;
+        letter-spacing: 0.1rem;
+        color: var(--clr1);
+        cursor: pointer;
+      }
+      & .btn:hover {
+        background-color: var(--clr1);
+        color: #fff;
+      }
+    }
+  }
+
+  & .pic_sec {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    & img {
+      height: 45rem;
+      z-index: 10;
+    }
+  }
+  & .pic_sec::before {
+    content: "";
+    position: absolute;
+    bottom: -20rem;
+    right: 0;
+    height: 45rem;
+    width: 45rem;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background: var(--clr1);
+  }
+}
+
+@keyframes textAnimation {
+  40%,
+  60% {
+    left: 33rem;
+  }
+  90%,
+  100% {
+    left: 14.7rem;
+  }
+}
+
+/* skills section */
+/* -------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+
+.skills {
+  background-color: #333;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  & .skill_text {
+    height: 12%;
+    text-align: center;
+
+    & h1 {
+      color: var(--clr1);
+      font-size: 2.3rem;
+      letter-spacing: 0.01rem;
+    }
+
+    & p {
+      margin-top: 0.5rem;
+      font-size: 1.5rem;
+      letter-spacing: 0.01rem;
+      color: #fff;
+    }
+  }
+
+  & .skill_sec {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 55%;
+    margin-top: 3rem;
+
+    & .skill {
+      position: relative;
+      height: 100%;
+      width: 20%;
+      border-radius: 2rem;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      & .skill_icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 65%;
+        width: 100%;
+
+        & img {
+          height: 80%;
+          filter: invert(1);
+          opacity: 0.8;
+          transition: 1s;
+        }
+      }
+
+      & .description {
+        position: absolute;
+        bottom: 0.5rem;
+        left: 0.5rem;
+        height: 30%;
+        width: 95%;
+        border-radius: 2rem;
+        margin: auto;
+        padding: 10px 10px;
+        overflow: hidden;
+
+        & h1 {
+          text-align: center;
+          color: var(--clr1);
+        }
+
+        & p {
+          margin-top: 0.6rem;
+          text-align: center;
+          color: #fff;
+          font-size: 1.4rem;
+          transform: translateY(5.2rem);
+          transition: 1s;
+        }
+      }
+    }
+    & .skill:hover {
+      outline: 2px solid var(--clr1);
+    }
+
+    & .skill:hover p {
+      transform: translateY(0);
+    }
+
+    & .skill:hover img {
+      opacity: 1;
+    }
+  }
+}
+
+/* achievements section */
+
+.achievements {
+  background-color: #444;
+  padding-left: 4rem;
+  padding-right: 4rem;
+
+  & .achieve_elem {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    height: 85%;
+
+    & .achieve {
+      margin: auto;
+      height: 16rem;
+      width: 20rem;
+      outline: 2px solid var(--clr1);
+      border-bottom-right-radius: 2rem;
+      border-top-left-radius: 2rem;
+    }
+  }
+}
+
+/* about section */
+
+.about {
+  background-color: #555;
+  padding-left: 3rem ;
+  padding-right: 3rem ;
+
+  & .about_text{
+    height: 2rem;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    & h1{
+      font-size: 3rem;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: .1rem;
+
+      & span{
+        color: var(--clr1);
+      }
+    }
+  }
+
+  & .about_elem {
+    height: 75%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    & .about_section{
+      margin: auto;
+      height: 100%;
+      width: 85%;
+      outline: 2px solid red;
+      border-bottom-right-radius: 2rem;
+      border-top-left-radius: 2rem;
+    }
+  }
+}
+
+/* contact section */
+
+.contact {
+  background-color: #666;
+}

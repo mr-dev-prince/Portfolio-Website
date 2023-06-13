@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prince's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+    </style>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h2>Prince's Portfolio</h2>
+        <ul>
+          <a href="#home"><li class="list active">Home</li></a>
+          <a href="#skills"><li class="list">skills</li></a>
+          <a href="#about"><li class="list">about</li></a>
+          <a href="#contact"><li class="list">contact</li></a>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="section home" id="home">
+      <div class="text_sec">
+        <div class="text_content">
+          <div class="text">
+            <h1>Hi, I am Prince Kumar Chaurasia.</h1>
+            <h1>I am a <span class="changeText">Web Developer.</span></h1>
+          </div>
+          <div class="button">
+            <button class="btn btn1">hire me</button>
+            <button class="btn btn2">let's chat</button>
+          </div>
+        </div>
+      </div>
+      <div class="pic_sec">
+        <img src="/images/My project.png" alt="" />
+      </div>
+    </section>
+    <section class="section skills" id="skills">
+      <div class="skill_text">
+        <h1>Things I am good at</h1>
+        <p>
+          I am good at these skills and I constantly keep learning new things.
+        </p>
+      </div>
+      <div class="skill_sec">
+        <div class="skill">
+          <div class="skill_icon">
+            <img src="/images/android.png" alt="" />
+          </div>
+          <div class="description">
+            <h1>Android Development</h1>
+            <p>Java, Kotlin, Swift</p>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill_icon">
+            <img src="/images/software.png" alt="" />
+          </div>
+          <div class="description">
+            <h1>Software Development</h1>
+            <p>Git Hub, Azure, Jira</p>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill_icon">
+            <img src="/images/game-development.png" alt="" />
+          </div>
+          <div class="description">
+            <h1>Game Development</h1>
+            <p>Unity, Unreal Engine, GoDot</p>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill_icon">
+            <img src="/images/web-development.png" alt="" />
+          </div>
+          <div class="description">
+            <h1>Web Development</h1>
+            <p>React, MySQL, Node.Js</p>
+          </div>
+        </div>
+      </div>
+      <div class="center_btn">
+        <button class="btn skillBtn">View more</button>
+      </div>
+    </section>
+    <section class="section about" id="about">
+      <div class="about_text">
+        <h1>About <span>me</span></h1>
+      </div>
+      <div class="about_elem">
+        <div class="about_section one"></div>
+        <div class="about_section two"></div>
+      </div>
+    </section>
+    <section class="section contact" id="contact"></section>
+  </body>
+</html>
