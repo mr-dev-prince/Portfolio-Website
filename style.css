@@ -307,24 +307,24 @@ header {
 
 .about {
   background-color: #555;
-  padding-left: 3rem ;
-  padding-right: 3rem ;
+  padding-left: 3rem;
+  padding-right: 3rem;
 
-  & .about_text{
+  & .about_text {
     height: 2rem;
-    width:100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 2rem;
 
-    & h1{
+    & h1 {
       font-size: 3rem;
       color: #fff;
       text-transform: uppercase;
-      letter-spacing: .1rem;
+      letter-spacing: 0.1rem;
 
-      & span{
+      & span {
         color: var(--clr1);
       }
     }
@@ -336,16 +336,181 @@ header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
-    & .about_section{
+    & .about_section {
+      position: relative;
       margin: auto;
       height: 100%;
       width: 85%;
-      outline: 2px solid red;
       border-bottom-right-radius: 2rem;
       border-top-left-radius: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+    & .one {
+      & .table {
+        position: absolute;
+        height: 75%;
+        width: 100%;
+        font-size: 1rem;
+        top: 2rem;
+        padding: 5px 10px;
+
+        & thead {
+          font-size: 1.4rem;
+          text-transform: uppercase;
+          font-family: sans-serif;
+          text-align: center;
+
+          & th {
+            font-size: 2rem;
+            color: #fff;
+          }
+        }
+
+        & tbody {
+          font-size: 1.2rem;
+          letter-spacing: 0.01rem;
+          font-family: sans-serif;
+
+          & td {
+            color: var(--clr1);
+            text-align: center;
+          }
+
+          & .name {
+            color: #a5a2a2;
+          }
+        }
+      }
+
+      & .aboutBtn {
+        position: absolute;
+        bottom: 2rem;
+      }
+    }
+
+    & .about_section:hover {
+      box-shadow: 0 0 15px 3px var(--clr1);
+    }
+
+    & .two {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      place-items: center;
+
+      & .about_sec_two_elem {
+        height: 80%;
+        width: 80%;
+        outline: 2px solid white;
+      }
+
+      & .first {
+        position: relative;
+        border-top-left-radius: 2rem;
+
+        & .num {
+          position: absolute;
+          top: 1.2rem;
+          left: 2rem;
+          & h1 {
+            font-size: 6rem;
+            color: var(--clr1);
+          }
+        }
+
+        & .txt {
+          position: absolute;
+          bottom: 2rem;
+          left: 4rem;
+
+          & h2 {
+            letter-spacing: 0.3rem;
+            color: #fff;
+          }
+        }
+      }
+
+      & .second {
+        position: relative;
+
+        & .num2 {
+          position: absolute;
+          top: 1.2rem;
+          left: 2rem;
+          & h1 {
+            font-size: 6rem;
+            color: var(--clr1);
+          }
+        }
+
+        & .txt2 {
+          position: absolute;
+          bottom: 2rem;
+          left: 4rem;
+
+          & h2 {
+            letter-spacing: 0.3rem;
+            color: #fff;
+          }
+        }
+      }
+
+      & .third {
+        position: relative;
+
+        & .num3 {
+          position: absolute;
+          top: 1.2rem;
+          left: 2rem;
+          & h1 {
+            font-size: 6rem;
+            color: var(--clr1);
+          }
+        }
+
+        & .txt3 {
+          position: absolute;
+          bottom: 2rem;
+          left: 4rem;
+
+          & h2 {
+            letter-spacing: 0.3rem;
+            color: #fff;
+          }
+        }
+      }
+
+      & .fourth {
+        border-bottom-right-radius: 2rem;
+        position: relative;
+
+        & .num4 {
+          position: absolute;
+          top: 1.2rem;
+          left: 2rem;
+          & h1 {
+            font-size: 6rem;
+            color: var(--clr1);
+          }
+        }
+
+        & .txt4 {
+          position: absolute;
+          bottom: 2rem;
+          left: 4rem;
+
+          & h2 {
+            letter-spacing: 0.3rem;
+            color: #fff;
+          }
+        }
+      }
+      }
     }
   }
-}
 
 /* contact section */
 
