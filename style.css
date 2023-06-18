@@ -508,12 +508,98 @@ header {
           }
         }
       }
-      }
     }
   }
+}
 
 /* contact section */
 
 .contact {
   background-color: #666;
+
+  & .contact_heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & h1 {
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 3rem;
+
+      & span {
+        color: var(--clr1);
+      }
+    }
+  }
+
+  & .contact_Box {
+    height: 85%;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .contact_elem {
+      height: 100%;
+      /* outline: 2px solid red; */
+    }
+
+    & .elem_one {
+      padding: 20px 40px;
+      width: 50%;
+
+      & thead th h2 {
+        font-size: 1.9rem;
+        text-align: left;
+        color: var(--clr1);
+        letter-spacing: 0.05rem;
+      }
+
+      & tr {
+        margin-top: 1rem;
+      }
+
+      & tr td p {
+        font-size: 1.2rem;
+        letter-spacing: 0.05rem;
+        color: #fff;
+        margin: 1rem 0;
+      }
+      & tr td img {
+        height: 6rem;
+        filter: invert(1);
+        aspect-ratio: 1/2;
+        object-fit: contain;
+      }
+
+      & tr td h3 {
+        color: var(--clr1);
+      }
+
+      & tr td h2 a {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      & tr td h2 {
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: #fff;
+      }
+
+      & .social_media {
+        & img {
+          aspect-ratio: 1/2;
+          object-fit: contain;
+          margin-right: 1rem;
+        }
+      }
+    }
+
+    & .elem_two {
+      width: 90%;
+    }
+  }
 }
